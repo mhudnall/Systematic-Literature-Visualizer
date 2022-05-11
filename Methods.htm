@@ -55,90 +55,200 @@
     }
 </style>
 
-<script type="text/javascript" src="./Methods.json"></script>
 <script>
-    //Create vennSet object array from JSON data
-    var jDataParsed = JSON.parse(jData);
-    var vennSet = [];
-    var colCount = Object.keys(jDataParsed[0]).length;
-    //first 4 columns are standard and need to be ignored for the Venn
-    for (var c = 4; c < colCount; c++) {
-        let size = 0;
-        for (var r = 0; r < jDataParsed.length; r++) {
-            if (jDataParsed[r][Object.keys(jDataParsed[0])[c]] == 1) {
-                size = size + 1;
-            }
-        }
-        let sets = [];
-        sets.push(c - 4);
-        let category = {
-            "label": String([Object.keys(jDataParsed[0])[c]]),
-            "size": size,
-            "sets": sets
-        }
-        if (size != 0 && (category.label != undefined || category.label != null)) {
-            vennSet.push(category);
-        }
-    }
-    //Add overlaps of categories to Venn up to categories squared - 1 combinations
-    //All combinations
-    var candidateOverlap = [];
-    var candidateOverlapSize = 0;
-    for (var i = 0; i < vennSet.length; i++) {
-        for (var j = 0; j < vennSet.length; j++) {
-            //reset
-            candidateOverlap = [];
-            candidateOverlap.push(i);
-            candidateOverlapSize = 0;
-            if (!candidateOverlap.includes(j)) {
-                candidateOverlap.push(j);
-            }
-            //check overlap size for candidates if there are more than one item
-            if (candidateOverlap.length > 1) {
-                //calculate size of overlap by looking for flags in all applicable columns for all rows
+    var jDataParsed;
+    Papa.parse("./Lit-Methods.csv", {
+        download: true,
+        header: true,
+        skipEmptyLines: true,
+        complete: function(result) {
+            jDataParsed = result.data;
+            //Create vennSet object array from JSON data
+            var vennSet = [];
+            var colCount = Object.keys(jDataParsed[0]).length;
+            //first 4 columns are standard and need to be ignored for the Venn
+            for (var c = 4; c < colCount; c++) {
+                let size = 0;
                 for (var r = 0; r < jDataParsed.length; r++) {
-                    let PassedRowTest = true;
-                    for (var c = 0; c < candidateOverlap.length; c++) {
-                        //all candidate row columns must be 1 to past test, if not, skip row
-                        if (!PassedRowTest) break;
-                        //test for fail
-                        if (!jDataParsed[r][Object.keys(jDataParsed[r])[candidateOverlap[c] + 4]] == 1) {
-                            PassedRowTest = false;
+                    if (jDataParsed[r][Object.keys(jDataParsed[0])[c]] == 1) {
+                        size = size + 1;
+                    }
+                }
+                let sets = [];
+                sets.push(c - 4);
+                let category = {
+                    "label": String([Object.keys(jDataParsed[0])[c]]),
+                    "size": size,
+                    "sets": sets
+                }
+                if (size != 0 && (category.label != undefined || category.label != null)) {
+                    vennSet.push(category);
+                }
+            }
+
+            //Add overlaps of categories to Venn
+            //All combinations
+            var candidateOverlap = [];
+            var candidateOverlapSize = 0;
+            var PassedRowTest = true;
+            const powerset = arr => arr.reduce((a, v) => a.concat(a.map(r => [v].concat(r))), [
+                []
+            ]);
+            var setload = [];
+            for (var i = 0; i < vennSet.length; i++) {
+                setload.push(i);
+            }
+            var possibleCombinations = powerset(setload);
+            for (var j = 0; j < possibleCombinations.length; j++) {
+                candidateOverlapSize = 0;
+
+                //check overlap size for candidates if there are more than one item
+                if (possibleCombinations[j].length > 1) {
+                    //calculate size of overlap by looking for flags in all applicable columns for all rows
+                    for (var r = 0; r < jDataParsed.length; r++) {
+                        PassedRowTest = true;
+                        for (var c = 0; c < possibleCombinations[j].length; c++) {
+                            //all candidate row columns must be 0 to fail test, if not, break
+                            if (!PassedRowTest) break;
+                            if (typeof jDataParsed[r][Object.keys(jDataParsed[r])[possibleCombinations[j][c] + 4]] == 'undefined') break;
+                            //test for pass
+                            if (jDataParsed[r][Object.keys(jDataParsed[r])[possibleCombinations[j][c] + 4]] == 0) {
+                                PassedRowTest = false;
+                            }
+                        }
+                        if (PassedRowTest) candidateOverlapSize = candidateOverlapSize + 1;
+                    }
+                    var assignArray = possibleCombinations[j].slice().sort();
+                    if (assignArray.length > 1 && candidateOverlapSize > 0) {
+                        let overlap = {
+                            "size": candidateOverlapSize,
+                            "sets": assignArray
+                        }
+                        //make sure it does not already exist
+                        let dupCheck = false;
+                        vennSet.forEach((item) => {
+                            if (arrayEquals(item.sets, assignArray)) {
+                                dupCheck = true;
+                            }
+                        });
+                        if (!dupCheck) {
+                            vennSet.push(overlap);
                         }
                     }
-                    if (PassedRowTest) candidateOverlapSize = candidateOverlapSize + 1;
                 }
             }
 
-            var assignArray = candidateOverlap.slice().sort();
-            if (candidateOverlap.length > 1 && candidateOverlapSize > 0) {
-                let overlap = {
-                    "size": candidateOverlapSize,
-                    "sets": assignArray
+            var $select = $('#globalFilter');
+            var group = $('<optgroup label="Select one or more categories" />');
+            for (var i = 0; i < vennSet.length; i++) {
+                if (vennSet[i].label != undefined || vennSet[i].label != null) {
+                    $('<option value="' + i + '"/>').html(vennSet[i].label).appendTo(group);
                 }
-                //make sure it does not already exist
-                let dupCheck = false;
-                vennSet.forEach((item) => {
-                    if (arrayEquals(item.sets, assignArray)) {
-                        dupCheck = true;
+            }
+            group.appendTo($select);
+
+            createVenn(vennSet);
+
+            var columns = [];
+            colData = jDataParsed;
+            var colCount = Object.keys(colData[0]).length;
+            //Add categories
+            for (var i = 0; i < colData.length; i++) {
+                var categories = '';
+                for (var c = 4; c < colCount; c++) {
+                    if (colData[i][Object.keys(colData[0])[c]] == 1) {
+                        if (categories == '') {
+                            categories = Object.keys(colData[0])[c];
+                        } else {
+                            categories = categories + " | " + Object.keys(colData[0])[c];
+                        }
                     }
-                });
-                if (!dupCheck) {
-                    vennSet.push(overlap);
+                }
+                colData[i].Categories = categories;
+            }
+
+            if (colData.length > 0) {
+                var columnsIn = colData[0];
+                for (var key in columnsIn) {
+                    if (key.toLowerCase() != "title" && key.toLowerCase() != "study" && key.toLowerCase() != "doi" && key.toLowerCase() != "categories") {
+                        columns.push({
+                            title: key,
+                            data: key,
+                            visible: false
+                        });
+                    } else if (key.toLowerCase() == "doi") {
+                        columns.push({
+                            title: key,
+                            data: key,
+                            "render": function(data, type, row, meta) {
+                                if (type === 'display') {
+                                    data = '<a href=https://www.doi.org/' + data + ' target=_blank>' + data + '</a>';
+                                }
+                                return data;
+                            }
+                        });
+                    } else {
+                        columns.push({
+                            title: key,
+                            data: key
+                        });
+                    }
                 }
             }
-        }
-    }
+            $('#dt').DataTable({
+                data: jDataParsed,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5',
+                    'pdfHtml5'
+                ],
+                data: colData,
+                columns: columns
+            });
+            $('#globalFilter').select2();
+            $('#globalFilter').on('change', function(e) {
+                //Clear prior filter
+                $('#dt').DataTable().search('').columns().search('').draw();
+                //Filter to only common articles
+                var items = $(this).val();
+                //reset to original data
+                var resultTemp = [];
+                var resultFinal = [];
 
-    var $select = $('#globalFilter');
-    var group = $('<optgroup label="Select one or more categories" />');
-    for (var i = 0; i < vennSet.length; i++) {
-        if(vennSet[i].label != undefined || vennSet[i].label != null)
-            {
-        $('<option value="' + i + '"/>').html(vennSet[i].label).appendTo(group);
-            }
-    }
-    group.appendTo($select);
+                //Filter table
+                for (var i = 0; i < items.length; i++) {
+                    $('#dt').DataTable()
+                        .column(parseInt(items[i]) + 4).search('1')
+                        .draw();
+
+                    //Filter Venn
+                    for (var j = 0; j < vennSet.length; j++) {
+                        if (vennSet[j].sets.includes(parseInt(items[i]))) resultTemp.push(vennSet[j]);
+                    }
+                }
+                resultFinal = resultTemp.slice();
+                //remove items that are not completely in filtered set
+                for (var k = 0; k < resultTemp.length; k++) {
+                    for (var m = 0; m < resultTemp[k].sets.length; m++) {
+                        if (!items.includes(String(resultTemp[k].sets[m]))) {
+                            var index = resultFinal.indexOf(resultTemp[k]);
+                            if (index > -1) {
+                                resultFinal.splice(index, 1);
+                            }
+                        }
+                    }
+                }
+                if (items === undefined || items.length == 0) {
+                    resultFinal = vennSet;
+                }
+                createVenn(resultFinal);
+            });
+        }
+    });
+
+
 
     function toTitleCase(str) {
         var lcStr = str.toLowerCase();
@@ -192,7 +302,6 @@
             .on("click", function(event, d, i) {
                 //Clear prior filter
                 $('#dt').DataTable().search('').columns().search('').draw();
-                console.log(d.sets);
                 //Filter to only common articles
                 for (var i = 0; i < d.sets.length; i++) {
                     $('#dt').DataTable()
@@ -214,114 +323,6 @@
                     .style("stroke-opacity", 0);
             });
     };
-    createVenn(vennSet);
-
-    $(document).ready(function() {
-        var columns = [];
-        colData = JSON.parse(jData);
-        var colCount = Object.keys(colData[0]).length;
-        //Add categories
-        for (var i = 0; i < colData.length; i++) {
-            var categories = '';
-            for (var c = 4; c < colCount; c++) {
-                if (colData[i][Object.keys(colData[0])[c]] == 1) {
-                    if (categories == '') {
-                        categories = Object.keys(colData[0])[c];
-                    } else {
-                        categories = categories + " | " + Object.keys(colData[0])[c];
-                    }
-                }
-            }
-            colData[i].Categories = categories;
-        }
-
-        if (colData.length > 0) {
-            var columnsIn = colData[0];
-            for (var key in columnsIn) {
-                if (key.toLowerCase() != "title" && key.toLowerCase() != "study" && key.toLowerCase() != "doi" && key.toLowerCase() != "categories") {
-                    columns.push({
-                        title: key,
-                        data: key,
-                        visible: false
-                    });
-                } else if (key.toLowerCase() == "doi") {
-                    columns.push({
-                        title: key,
-                        data: key,
-                        "render": function(data, type, row, meta) {
-                            if (type === 'display') {
-                                data = '<a href=https://www.doi.org/' + data + ' target=_blank>' + data + '</a>';
-                            }
-                            return data;
-                        }
-                    });
-                } else {
-                    columns.push({
-                        title: key,
-                        data: key
-                    });
-                }
-            }
-        }
-        $('#dt').DataTable({
-            data: jData,
-            dom: 'Bfrtip',
-            buttons: [
-                'copyHtml5',
-                'excelHtml5',
-                'csvHtml5',
-                'pdfHtml5'
-            ],
-            data: colData,
-            columns: columns
-        });
-        $('#globalFilter').select2();
-        $('#globalFilter').on('change', function(e) {
-            console.log("change");
-            //Clear prior filter
-            $('#dt').DataTable().search('').columns().search('').draw();
-            //Filter to only common articles
-            var items = $(this).val();
-            //reset to original data
-            var resultTemp = [];
-            var resultFinal = [];
-
-            //Filter table
-            for (var i = 0; i < items.length; i++) {
-                $('#dt').DataTable()
-                    .column(parseInt(items[i]) + 4).search('1')
-                    .draw();
-
-                //Filter Venn
-                for (var j = 0; j < vennSet.length; j++) {
-                    if (vennSet[j].sets.includes(parseInt(items[i]))) resultTemp.push(vennSet[j]);
-                }
-            }
-            resultFinal = resultTemp.slice();
-            //remove items that are not completely in filtered set
-            for (var k = 0; k < resultTemp.length; k++) {
-                for (var m = 0; m < resultTemp[k].sets.length; m++) {
-                    console.log("looking for: " + resultTemp[k].sets[m]);
-                    console.log(items);
-                    if (!items.includes(String(resultTemp[k].sets[m]))) {
-                        var index = resultFinal.indexOf(resultTemp[k]);
-                        if (index > -1) {
-                            console.log("Removing item");
-                            console.log(resultFinal[index]);
-                            resultFinal.splice(index, 1);
-                            console.log("Item removed");
-                        }
-                    }
-                }
-            }
-            if (items === undefined || items.length == 0) {
-                resultFinal = vennSet;
-            }
-            console.log("-------FINAL ITEMS------");
-            console.log(resultFinal);
-            createVenn(resultFinal);
-        });
-    });
 </script>
 
 </html>
