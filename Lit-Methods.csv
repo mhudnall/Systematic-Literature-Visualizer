@@ -1,87 +1,87 @@
-ID,Title,Study,DOI,Simulation,Heuristics,Stochastic,Econometric/Choice Model,GIS,Case Studies,Survey,Remote Sensing
-0,Heuristic framework for optimizing hurricane evacuation operations,(Afshar and Haghani 2008),10.3141/2089-02,1,1,0,0,0,1,0,0
-1,Simulation-based framework for transportation network management in emergencies,(Balakrishna et al. 2008),10.3141/2041-09,1,0,0,0,0,1,0,0
-2,Developing a dynamic traffic management modeling framework for hurricane evacuation,(Barrett et al. 2000),10.3141/1733-15,1,0,0,0,1,0,0,0
-3,Planning for a bus-based evacuation,(Bish 2011),10.1007/s00291-011-0256-1,0,1,0,0,0,0,0,0
-4,Aggregate-level demand management in evacuation planning,(Bish and Sherali 2013),10.1016/j.ejor.2012.07.036,0,1,0,0,0,0,0,0
-5,Optimal evacuation planning using staging and routing,(Bish et al. 2014),10.1057/jors.2013.3,0,0,0,0,0,0,0,0
-6,"Development of a Strategic Hurricane Evacuation-Dynamic Traffic Assignment Model for the Houston, Texas, Region",(Brown et al. 2009),10.3141/2137-06,1,0,0,0,0,0,0,0
-7,An Open Transportation Network Resilience Analytics Platform for Large-Scale Urban Accessibility Analysis,(Castro et al. 2018),10.1061/9780784481295.022,1,0,0,0,1,1,0,0
-8,Optimizing Intermediate Crossovers and Ramp Closures for Hurricane Evacuation,(Chang and Edara 2016),10.14257/ijt.2016.4.2.05,1,1,0,0,1,1,0,0
-9,AReBIC: Autonomous reservation-based intersection control for emergency evacuation,(Chang and Edara 2017),10.1109/IVS.2017.7995980,1,0,0,0,0,1,1,0
-10,Evaluation of a reservation-based intersection control algorithm for hurricane evacuation with autonomous vehicles,(Chang and Edara 2018),10.1016/j.ijdrr.2017.09.001,1,0,0,0,0,0,0,0
-11,A stochastic look-ahead approach for hurricane relief logistics operations planning under uncertainty,(Chang et al. 2021),10.1007/s10479-021-04025-z,0,1,1,0,0,0,0,0
-12,Transport Management for Evacuation of Victims,(Chavhan and Venkataram 2021),10.1109/TETCI.2019.2940832,1,0,0,0,0,1,0,0
-13,Incorporating contraflow simulation into a transit-based emergency evacuation plan,(Chen et al. n.d.),,1,1,0,0,0,0,0,0
-14,Development of a time-dependent disaggregate hurricane evacuation destination choice model,(Cheng et al. 2013),10.1061/(ASCE)NH.1527-6996.0000107,0,0,0,1,0,0,1,0
-15,Enhancing humanitarian logistics and the transportation of relief supplies: Integrating system dynamics and vehicle routing,(Cruz-Cantillo et al. n.d.),10.4018/978-1-5225-4077-9.ch016,1,0,0,0,1,0,0,0
-16,Robust Emergency Relief Supply Planning for Foreseen Disasters Under Evacuation-Side Uncertainty,(Dalal and Uster 2021),10.1287/trsc.2020.1020,0,0,0,0,1,1,0,0
-17,Regional transportation and supply chain modeling for large-scale emergencies,(Dessouky et al. 2017),,1,1,0,0,0,0,0,0
-18,Minimizing Patient Transport Times During Mass Population Evacuations,(Duanmu et al. 2010),10.3141/2196-16,1,0,0,0,1,1,0,0
-19,An optimized evacuation model with compatibility constraints in the context of disability: an ancient-inspired Giza Pyramids Construction metaheuristic approach,(Ebrahimnejad and Harifi 2022),10.1007/s10489-021-03079-7,0,1,0,0,0,0,0,0
-20,Development of a large-scale traffic simulation model for hurricane evacuation-methodology and lessons learned,(Edara et al. 2010),10.1061/(ASCE)NH.1527-6996.0000015,1,0,0,0,1,0,0,0
-21,A chance-constrained two-stage stochastic programming model for humanitarian relief network design,(Elçi and Noyan 2018),10.1016/j.trb.2017.12.002,0,0,1,0,0,1,0,0
-22,A decision-support framework for emergency evacuation planning during extreme storm events,(Fahad et al. 2019),10.1016/j.trd.2019.09.024,1,0,0,0,1,0,0,0
-23,Mobility benefits of intermediate crossovers on contraflow facilities during hurricane evacuation,(Fang and Edara 2014),10.3141/2459-05,1,1,0,0,1,1,0,0
-24,Weighting critical infrastructure dependencies to facilitate evacuations,(Foytik and Robinson 2018),10.1016/j.ijdrr.2017.11.019,1,0,0,0,0,0,0,0
-25,"Evaluation of different contraflow strategies for hurricane evacuation in Charleston, South Carolina",(Fries et al. 2011),10.1080/03081060.2011.554706,1,0,0,0,1,0,0,0
-26,"A-RESCUE 2.0: A High-Fidelity, Parallel, Agent-Based Evacuation Simulator",(Gehlot et al. 2019),10.1061/(ASCE)CP.1943-5487.0000802,1,0,0,1,0,0,0,0
-27,Hurricane evacuation decision model in a stochastic dynamic network,(Gita Ayu and Mirchandani 2021),,1,0,1,0,0,1,0,0
-28,Real-time information driven decision support system for evacuation planning,(Gottumukkala et al. 2012),10.1109/CogSIMA.2012.6188383,1,0,0,1,1,0,0,0
-29,"Streets, storm surge, and the frailty of urban transport systems: A grid-based approach for identifying informal street network connections to facilitate mobility",(Helderop and Grubesic 2019),10.1016/j.trd.2018.12.024,0,0,0,0,1,0,0,0
-30,Conflict-Free Evacuation Route Planning,(Herschelman et al. 2021),10.1007/s10707-021-00435-0,0,0,0,0,0,0,0,0
-31,Testing a flexible geographic information system-based network flow model for routing hurricane disaster relief goods,(Horner and Downs 2007),10.3141/2022-06,0,0,0,0,1,0,0,0
-32,EvacSys: A Cloud-Based Service for Emergency Evacuation,(Khalid et al. 2016),10.1109/MCC.2016.10,1,0,1,0,0,1,0,0
-33,Evacuation route planning: Scalable heuristics,(Kim et al. 2007),10.1145/1341012.1341039,0,1,0,0,0,0,0,0
-34,Contraflow transportation network reconfiguration for evacuation route planning,(Kim et al. 2008),10.1109/TKDE.2007.190722,0,1,0,0,0,0,0,0
-35,LiDAR assisted emergency response: Detection of transport network obstructions caused by major disasters,(Kwan and Ransberger 2010),10.1016/j.compenvurbsys.2010.02.001,0,0,0,0,1,0,0,1
-36,A priori assessment of a smart-navigated unmanned aerial vehicle disaster cargo fleet,(Larson et al. 2020),10.1177/0037549720921447,1,0,0,0,0,0,0,0
-37,Options for improving evacuation: Investigating an unconventional strategy and expanding route options using TRansportation ANalysis and SIMulation System,(Lewis et al. 2015),10.5055/jem.2015.0229,1,0,0,0,1,0,0,0
-38,Modeling and performance assessment of contraflow evacuation termination points,(Lim and Wolshon 2005),10.1177/0361198105192200116,1,0,0,0,0,0,0,0
-39,Pedestrian-bus route and pickup location planning for emergency evacuation,(Lu et al. 2021),10.3846/transport.2020.13674,0,0,0,0,0,0,0,0
-40,An architecture for safe evacuation route recommendation in smart spaces,(Lujak et al. 2016),,0,0,0,0,0,0,0,0
-41,Contraflow evacuation e-planning system for I-65 in Alabama,(Moynihan and Fonseca 2016a),10.1504/EG.2016.074243,1,0,1,0,0,0,0,0
-42,Design of a demand forecasting module for contraflow evacuation planning,(Moynihan and Fonseca 2016b),10.4236/jtts.2016.65024,1,0,0,0,0,0,0,0
-43,Development of a simulation model for hurricane evacuation of the gulf coast,(Moynihan et al. 2008),,1,0,0,1,0,0,1,0
-44,Transit-based emergency evacuation simulation modeling,(Naghawi and Wolshon 2010),10.1080/19439962.2010.488316,1,0,0,0,0,0,0,0
-45,Performance of Traffic Networks during Multimodal Evacuations: Simulation-Based Assessment,(Naghawi and Wolshon 2012),10.1061/(ASCE)NH.1527-6996.0000065,1,0,0,0,1,0,0,0
-46,Operation of multimodal transport system during mass evacuations,(Naghawi and Wolshon 2015),10.1139/cjce-2014-0177,1,0,0,0,0,0,0,0
-47,Simulating emergencies with transport outcomes Sim (SETOSim): Application of an agent-based decision support tool to community evacuation planning,(Nakanishi et al. 2020),10.1016/j.ijdrr.2020.101657,1,0,0,0,0,1,1,0
-48,EVAQ: A new analytical model for voluntary and mandatory evacuation strategies on time-varying networks,(Pel et al. 2008),10.1109/ITSC.2008.4732655,1,0,0,1,0,1,0,0
-49,Evacuee Route Choice Decisions in a Dynamic Hurricane Evacuation Context,(Robinson and Khattak 2012),10.3141/2312-15,1,0,0,1,0,0,1,0
-50,Operational and Safety Impact Analysis of Implementing Emergency Shoulder Use (ESU) for Hurricane Evacuation,(Sharma et al. 2020),10.1177/0361198119900502,1,0,0,0,0,0,0,0
-51,Experiences with evacuation route planning algorithms,(Shekhar et al. 2012),10.1080/13658816.2012.719624,0,1,0,0,0,0,0,0
-52,Hampton roads hurricane evacuation arterial routes preliminary study,(Shen et al. n.d.),10.5555/1404803.1404820,1,0,0,0,1,0,0,0
-53,Optimum transit operations during the emergency evacuations,(Song et al. 2009),10.1016/S1570-6672(08)60096-3,1,1,1,0,0,0,1,0
-54,"Dynamic Traffic Assignment Evaluation of Hurricane Evacuation Strategies for the Houston-Galveston, Texas, Region",(Songchitruksa et al. 2012),10.3141/2312-11,1,0,0,0,0,0,0,0
-55,Research of 3S integrated technology in emergency logistics distribution under public emergency,(Sun et al. 2010),10.1061/41139(387)432,0,0,0,0,1,0,0,1
-56,Hurricane evacuation planning using public transportation,(Swamy et al. 2017),10.1016/j.seps.2016.10.009,1,1,1,0,0,1,0,0
-57,Quantification of Compound Flooding over Roadway Network during Extreme Events for Planning Emergency Operations,(Tahvildari et al. 2021),doi.org/10.1061/(ASCE)NH.1527-6996.0000524,0,0,0,0,1,0,0,0
-58,Routing algorithms as tools for integrating social distancing with emergency evacuation,(Tsai et al. 2021),,1,0,0,0,0,1,0,0
-59,Location Routing Approach for the Humanitarian Prepositioning Problem,(Ukkusuri and Yushimito 2008),10.3141/2089-03,0,0,0,0,0,0,0,0
-60,A-RESCUE: An Agent based Regional Evacuation Simulator Coupled with User Enriched Behavior,(Ukkusuri et al. 2017),10.1007/s11067-016-9323-0,1,0,0,1,1,1,1,0
-61,Strategic emergency preparedness network design integrating supply and demand sides in a multi-objective approach,(Üster and Dalal 2017),10.1080/0740817X.2016.1234731,0,0,0,0,1,1,0,0
-62,An Integrated Logistic Model for Predictable Disasters,(Vanajakumari et al. 2016),10.1111/poms.12533,0,0,0,0,0,0,0,0
-63,Safety of users in road evacuation: Modelling and DSS for paths design of emergency vehicles,(Vitetta et al. 2009),10.2495/SDP090451,1,0,0,0,0,0,0,0
-64,A stochastic programming model for emergency supply planning considering traffic congestion,(Wang and Nie 2019),10.1080/24725854.2019.1589657,0,0,1,0,0,1,0,0
-65,A stochastic programming model for emergency supply planning considering transportation network mitigation and traffic congestion,(Wang and Nie 2022),10.1016/j.seps.2021.101119,0,0,1,0,0,1,0,0
-66,Effectiveness of traffic management strategies at destination during emergency evacuation,(WANG et al. 2010),10.1080/19439962.2010.487784,1,0,0,0,0,0,0,0
-67,Evacuation planning for disaster responses: A stochastic programming framework,(Wang et al. 2016),10.1016/j.trc.2016.05.022,0,1,1,0,0,0,0,0
-68,Modeling and Analysis of Optimal Strategies for Leveraging Ride-Sourcing Services in Hurricane Evacuation,(Wang et al. 2021),10.3390/su13084444,0,0,0,0,0,1,0,0
-69,A hierarchical approach to modeling hurricane disaster relief goods distribution,(Widener and Horner 2011),10.1016/j.jtrangeo.2010.10.006,0,0,0,0,1,1,0,0
-70,A dartboard network cut based approach to evacuation route planning: A summary of results,(Yang et al. 2012),10.1007/978-3-642-33024-7_24,0,0,0,0,0,0,0,0
-71,Modeling transit-assisted hurricane evacuation through socio-spatial networks,(Yang et al. 2020),10.1080/13658816.2020.1828590,1,0,0,0,1,1,1,0
-72,Modeling transit-assisted hurricane evacuation through socio-spatial networks,(Yang et al. 2021),10.1080/13658816.2020.1828590,1,0,0,0,1,1,0,0
-73,Risk reduction impact of connected vehicle technology on regional hurricane evacuations: A simulation study,(Yin et al. 2018),10.1016/j.ijdrr.2018.01.013,1,0,0,0,0,0,0,0
-74,ViCTS: A novel network partition algorithm for scalable agent-based modeling of mass evacuation,(Yin et al. 2020),10.1016/j.compenvurbsys.2019.101452,1,0,0,0,1,0,0,0
-75,A two-tier solution for disaster relief management,(Yusoff et al. 2013),10.1109/ISIEA.2013.6738991,0,0,0,0,0,0,0,0
-76,A vehicle route planning method of two-phase large-scale crowd evacuation in typhoon relief activities,(Zhan et al. 2019),10.1155/2019/9539746,1,1,1,0,0,0,0,0
-77,A dynamic evacuation model for pedestrian-vehicle mixed-flow networks,(Zhang and Chang 2014),10.1016/j.trc.2014.01.003,1,0,0,0,0,0,0,0
-78,Route selection for emergency logistics management: A bio-inspired algorithm,(Zhang et al. 2013a),10.1016/j.ssci.2012.12.003,0,0,0,0,0,1,0,0
-79,Megaregion Network Simulation for Evacuation Analysis,(Zhang et al. 2013b),10.3141/2397-19,1,0,0,1,1,0,0,0
-80,Integration of a cell transmission model and macroscopic fundamental diagram: Network aggregation for dynamic traffic models,(Zhang et al. 2015),10.1016/j.trc.2015.03.040,1,0,0,0,0,1,0,0
-81,Effects of shadow evacuation on megaregion evacuations,(Zhang et al. 2020),10.1016/j.trd.2020.102295,1,0,0,0,0,0,0,0
-82,Optimizing one-way traffic network reconfiguration and lane-based non-diversion routing for evacuation,(Zhao et al. 2016),10.1002/atr.1362,1,1,0,0,0,0,0,0
-83,An intelligent system for emergency traffic routing,(Zhou and Liu 2011),10.1007/978-3-642-23223-7_55,1,0,0,0,1,1,0,0
-84,Hurricane Evacuation Modeling Using Behavior Models and Scenario-Driven Agent-based Simulations,(Zhu et al. 2018),10.1016/j.procs.2018.04.074,1,0,0,1,1,0,1,0
-85,Distributed genetic algorithm for disaster relief planning,(Zidi et al. 2013),,0,1,0,0,0,0,0,0
+ID,Title,Study,DOI,Optimization,Simulation,Heuristics,Stochastic,Econometric/Choice Model,GIS,Case Studies,Survey,Remote Sensing
+0,Heuristic framework for optimizing hurricane evacuation operations,(Afshar and Haghani 2008),10.3141/2089-02,1,1,1,0,0,0,1,0,0
+1,Simulation-based framework for transportation network management in emergencies,(Balakrishna et al. 2008),10.3141/2041-09,1,1,0,0,0,0,1,0,0
+2,Developing a dynamic traffic management modeling framework for hurricane evacuation,(Barrett et al. 2000),10.3141/1733-15,1,1,0,0,0,1,0,0,0
+3,Planning for a bus-based evacuation,(Bish 2011),10.1007/s00291-011-0256-1,1,0,1,0,0,0,0,0,0
+4,Aggregate-level demand management in evacuation planning,(Bish and Sherali 2013),10.1016/j.ejor.2012.07.036,1,0,1,0,0,0,0,0,0
+5,Optimal evacuation planning using staging and routing,(Bish et al. 2014),10.1057/jors.2013.3,1,0,0,0,0,0,0,0,0
+6,"Development of a Strategic Hurricane Evacuation-Dynamic Traffic Assignment Model for the Houston, Texas, Region",(Brown et al. 2009),10.3141/2137-06,0,1,0,0,0,0,0,0,0
+7,An Open Transportation Network Resilience Analytics Platform for Large-Scale Urban Accessibility Analysis,(Castro et al. 2018),10.1061/9780784481295.022,0,1,0,0,0,1,1,0,0
+8,Optimizing Intermediate Crossovers and Ramp Closures for Hurricane Evacuation,(Chang and Edara 2016),10.14257/ijt.2016.4.2.05,1,1,1,0,0,1,1,0,0
+9,AReBIC: Autonomous reservation-based intersection control for emergency evacuation,(Chang and Edara 2017),10.1109/IVS.2017.7995980,1,1,0,0,0,0,1,1,0
+10,Evaluation of a reservation-based intersection control algorithm for hurricane evacuation with autonomous vehicles,(Chang and Edara 2018),10.1016/j.ijdrr.2017.09.001,1,1,0,0,0,0,0,0,0
+11,A stochastic look-ahead approach for hurricane relief logistics operations planning under uncertainty,(Chang et al. 2021),10.1007/s10479-021-04025-z,1,0,1,1,0,0,0,0,0
+12,Transport Management for Evacuation of Victims,(Chavhan and Venkataram 2021),10.1109/TETCI.2019.2940832,1,1,0,0,0,0,1,0,0
+13,Incorporating contraflow simulation into a transit-based emergency evacuation plan,(Chen et al. n.d.),,0,1,1,0,0,0,0,0,0
+14,Development of a time-dependent disaggregate hurricane evacuation destination choice model,(Cheng et al. 2013),10.1061/(ASCE)NH.1527-6996.0000107,0,0,0,0,1,0,0,1,0
+15,Enhancing humanitarian logistics and the transportation of relief supplies: Integrating system dynamics and vehicle routing,(Cruz-Cantillo et al. n.d.),10.4018/978-1-5225-4077-9.ch016,0,1,0,0,0,1,0,0,0
+16,Robust Emergency Relief Supply Planning for Foreseen Disasters Under Evacuation-Side Uncertainty,(Dalal and Uster 2021),10.1287/trsc.2020.1020,1,0,0,0,0,1,1,0,0
+17,Regional transportation and supply chain modeling for large-scale emergencies,(Dessouky et al. 2017),,1,1,1,0,0,0,0,0,0
+18,Minimizing Patient Transport Times During Mass Population Evacuations,(Duanmu et al. 2010),10.3141/2196-16,1,1,0,0,0,1,1,0,0
+19,An optimized evacuation model with compatibility constraints in the context of disability: an ancient-inspired Giza Pyramids Construction metaheuristic approach,(Ebrahimnejad and Harifi 2022),10.1007/s10489-021-03079-7,1,0,1,0,0,0,0,0,0
+20,Development of a large-scale traffic simulation model for hurricane evacuation-methodology and lessons learned,(Edara et al. 2010),10.1061/(ASCE)NH.1527-6996.0000015,0,1,0,0,0,1,0,0,0
+21,A chance-constrained two-stage stochastic programming model for humanitarian relief network design,(El i and Noyan 2018),10.1016/j.trb.2017.12.002,1,0,0,1,0,0,1,0,0
+22,A decision-support framework for emergency evacuation planning during extreme storm events,(Fahad et al. 2019),10.1016/j.trd.2019.09.024,1,1,0,0,0,1,0,0,0
+23,Mobility benefits of intermediate crossovers on contraflow facilities during hurricane evacuation,(Fang and Edara 2014),10.3141/2459-05,1,1,1,0,0,1,1,0,0
+24,Weighting critical infrastructure dependencies to facilitate evacuations,(Foytik and Robinson 2018),10.1016/j.ijdrr.2017.11.019,1,1,0,0,0,0,0,0,0
+25,"Evaluation of different contraflow strategies for hurricane evacuation in Charleston, South Carolina",(Fries et al. 2011),10.1080/03081060.2011.554706,1,1,0,0,0,1,0,0,0
+26,"A-RESCUE 2.0: A High-Fidelity, Parallel, Agent-Based Evacuation Simulator",(Gehlot et al. 2019),10.1061/(ASCE)CP.1943-5487.0000802,1,1,0,0,1,0,0,0,0
+27,Hurricane evacuation decision model in a stochastic dynamic network,(Gita Ayu and Mirchandani 2021),,1,1,0,1,0,0,1,0,0
+28,Real-time information driven decision support system for evacuation planning,(Gottumukkala et al. 2012),10.1109/CogSIMA.2012.6188383,0,1,0,0,1,1,0,0,0
+29,"Streets, storm surge, and the frailty of urban transport systems: A grid-based approach for identifying informal street network connections to facilitate mobility",(Helderop and Grubesic 2019),10.1016/j.trd.2018.12.024,1,0,0,0,0,1,0,0,0
+30,Conflict-Free Evacuation Route Planning,(Herschelman et al. 2021),10.1007/s10707-021-00435-0,1,0,0,0,0,0,0,0,0
+31,Testing a flexible geographic information system-based network flow model for routing hurricane disaster relief goods,(Horner and Downs 2007),10.3141/2022-06,1,0,0,0,0,1,0,0,0
+32,EvacSys: A Cloud-Based Service for Emergency Evacuation,(Khalid et al. 2016),10.1109/MCC.2016.10,1,1,0,1,0,0,1,0,0
+33,Evacuation route planning: Scalable heuristics,(Kim et al. 2007),10.1145/1341012.1341039,1,0,1,0,0,0,0,0,0
+34,Contraflow transportation network reconfiguration for evacuation route planning,(Kim et al. 2008),10.1109/TKDE.2007.190722,1,0,1,0,0,0,0,0,0
+35,LiDAR assisted emergency response: Detection of transport network obstructions caused by major disasters,(Kwan and Ransberger 2010),10.1016/j.compenvurbsys.2010.02.001,0,0,0,0,0,1,0,0,1
+36,A priori assessment of a smart-navigated unmanned aerial vehicle disaster cargo fleet,(Larson et al. 2020),10.1177/0037549720921447,1,1,0,0,0,0,0,0,0
+37,Options for improving evacuation: Investigating an unconventional strategy and expanding route options using TRansportation ANalysis and SIMulation System,(Lewis et al. 2015),10.5055/jem.2015.0229,0,1,0,0,0,1,0,0,0
+38,Modeling and performance assessment of contraflow evacuation termination points,(Lim and Wolshon 2005),10.1177/0361198105192200116,0,1,0,0,0,0,0,0,0
+39,Pedestrian-bus route and pickup location planning for emergency evacuation,(Lu et al. 2021),10.3846/transport.2020.13674,1,0,0,0,0,0,0,0,0
+40,An architecture for safe evacuation route recommendation in smart spaces,(Lujak et al. 2016),,1,0,0,0,0,0,0,0,0
+41,Contraflow evacuation e-planning system for I-65 in Alabama,(Moynihan and Fonseca 2016a),10.1504/EG.2016.074243,1,1,0,1,0,0,0,0,0
+42,Design of a demand forecasting module for contraflow evacuation planning,(Moynihan and Fonseca 2016b),10.4236/jtts.2016.65024,1,1,0,0,0,0,0,0,0
+43,Development of a simulation model for hurricane evacuation of the gulf coast,(Moynihan et al. 2008),,0,1,0,0,1,0,0,1,0
+44,Transit-based emergency evacuation simulation modeling,(Naghawi and Wolshon 2010),10.1080/19439962.2010.488316,1,1,0,0,0,0,0,0,0
+45,Performance of Traffic Networks during Multimodal Evacuations: Simulation-Based Assessment,(Naghawi and Wolshon 2012),10.1061/(ASCE)NH.1527-6996.0000065,0,1,0,0,0,1,0,0,0
+46,Operation of multimodal transport system during mass evacuations,(Naghawi and Wolshon 2015),10.1139/cjce-2014-0177,1,1,0,0,0,0,0,0,0
+47,Simulating emergencies with transport outcomes Sim (SETOSim): Application of an agent-based decision support tool to community evacuation planning,(Nakanishi et al. 2020),10.1016/j.ijdrr.2020.101657,1,1,0,0,0,0,1,1,0
+48,EVAQ: A new analytical model for voluntary and mandatory evacuation strategies on time-varying networks,(Pel et al. 2008),10.1109/ITSC.2008.4732655,0,1,0,0,1,0,1,0,0
+49,Evacuee Route Choice Decisions in a Dynamic Hurricane Evacuation Context,(Robinson and Khattak 2012),10.3141/2312-15,0,1,0,0,1,0,0,1,0
+50,Operational and Safety Impact Analysis of Implementing Emergency Shoulder Use (ESU) for Hurricane Evacuation,(Sharma et al. 2020),10.1177/0361198119900502,0,1,0,0,0,0,0,0,0
+51,Experiences with evacuation route planning algorithms,(Shekhar et al. 2012),10.1080/13658816.2012.719624,1,0,1,0,0,0,0,0,0
+52,Hampton roads hurricane evacuation arterial routes preliminary study,(Shen et al. n.d.),10.5555/1404803.1404820,0,1,0,0,0,1,0,0,0
+53,Optimum transit operations during the emergency evacuations,(Song et al. 2009),10.1016/S1570-6672(08)60096-3,1,1,1,1,0,0,0,1,0
+54,"Dynamic Traffic Assignment Evaluation of Hurricane Evacuation Strategies for the Houston-Galveston, Texas, Region",(Songchitruksa et al. 2012),10.3141/2312-11,0,1,0,0,0,0,0,0,0
+55,Research of 3S integrated technology in emergency logistics distribution under public emergency,(Sun et al. 2010),10.1061/41139(387)432,1,0,0,0,0,1,0,0,1
+56,Hurricane evacuation planning using public transportation,(Swamy et al. 2017),10.1016/j.seps.2016.10.009,1,1,1,1,0,0,1,0,0
+57,Quantification of Compound Flooding over Roadway Network during Extreme Events for Planning Emergency Operations,(Tahvildari et al. 2021),doi.org/10.1061/(ASCE)NH.1527-6996.0000524,1,0,0,0,0,1,0,0,0
+58,Routing algorithms as tools for integrating social distancing with emergency evacuation,(Tsai et al. 2021),,1,1,0,0,0,0,1,0,0
+59,Location Routing Approach for the Humanitarian Prepositioning Problem,(Ukkusuri and Yushimito 2008),10.3141/2089-03,1,0,0,0,0,0,0,0,0
+60,A-RESCUE: An Agent based Regional Evacuation Simulator Coupled with User Enriched Behavior,(Ukkusuri et al. 2017),10.1007/s11067-016-9323-0,1,1,0,0,1,1,1,1,0
+61,Strategic emergency preparedness network design integrating supply and demand sides in a multi-objective approach,( ster and Dalal 2017),10.1080/0740817X.2016.1234731,1,0,0,0,0,1,1,0,0
+62,An Integrated Logistic Model for Predictable Disasters,(Vanajakumari et al. 2016),10.1111/poms.12533,1,0,0,0,0,0,0,0,0
+63,Safety of users in road evacuation: Modelling and DSS for paths design of emergency vehicles,(Vitetta et al. 2009),10.2495/SDP090451,1,1,0,0,0,0,0,0,0
+64,A stochastic programming model for emergency supply planning considering traffic congestion,(Wang and Nie 2019),10.1080/24725854.2019.1589657,1,0,0,1,0,0,1,0,0
+65,A stochastic programming model for emergency supply planning considering transportation network mitigation and traffic congestion,(Wang and Nie 2022),10.1016/j.seps.2021.101119,1,0,0,1,0,0,1,0,0
+66,Effectiveness of traffic management strategies at destination during emergency evacuation,(WANG et al. 2010),10.1080/19439962.2010.487784,0,1,0,0,0,0,0,0,0
+67,Evacuation planning for disaster responses: A stochastic programming framework,(Wang et al. 2016),10.1016/j.trc.2016.05.022,1,0,1,1,0,0,0,0,0
+68,Modeling and Analysis of Optimal Strategies for Leveraging Ride-Sourcing Services in Hurricane Evacuation,(Wang et al. 2021),10.3390/su13084444,1,0,0,0,0,0,1,0,0
+69,A hierarchical approach to modeling hurricane disaster relief goods distribution,(Widener and Horner 2011),10.1016/j.jtrangeo.2010.10.006,1,0,0,0,0,1,1,0,0
+70,A dartboard network cut based approach to evacuation route planning: A summary of results,(Yang et al. 2012),10.1007/978-3-642-33024-7_24,1,0,0,0,0,0,0,0,0
+71,Modeling transit-assisted hurricane evacuation through socio-spatial networks,(Yang et al. 2020),10.1080/13658816.2020.1828590,1,1,0,0,0,1,1,1,0
+72,Modeling transit-assisted hurricane evacuation through socio-spatial networks,(Yang et al. 2021),10.1080/13658816.2020.1828590,1,1,0,0,0,1,1,0,0
+73,Risk reduction impact of connected vehicle technology on regional hurricane evacuations: A simulation study,(Yin et al. 2018),10.1016/j.ijdrr.2018.01.013,1,1,0,0,0,0,0,0,0
+74,ViCTS: A novel network partition algorithm for scalable agent-based modeling of mass evacuation,(Yin et al. 2020),10.1016/j.compenvurbsys.2019.101452,1,1,0,0,0,1,0,0,0
+75,A two-tier solution for disaster relief management,(Yusoff et al. 2013),10.1109/ISIEA.2013.6738991,1,0,0,0,0,0,0,0,0
+76,A vehicle route planning method of two-phase large-scale crowd evacuation in typhoon relief activities,(Zhan et al. 2019),10.1155/2019/9539746,1,1,1,1,0,0,0,0,0
+77,A dynamic evacuation model for pedestrian-vehicle mixed-flow networks,(Zhang and Chang 2014),10.1016/j.trc.2014.01.003,1,1,0,0,0,0,0,0,0
+78,Route selection for emergency logistics management: A bio-inspired algorithm,(Zhang et al. 2013a),10.1016/j.ssci.2012.12.003,1,0,0,0,0,0,1,0,0
+79,Megaregion Network Simulation for Evacuation Analysis,(Zhang et al. 2013b),10.3141/2397-19,0,1,0,0,1,1,0,0,0
+80,Integration of a cell transmission model and macroscopic fundamental diagram: Network aggregation for dynamic traffic models,(Zhang et al. 2015),10.1016/j.trc.2015.03.040,0,1,0,0,0,0,1,0,0
+81,Effects of shadow evacuation on megaregion evacuations,(Zhang et al. 2020),10.1016/j.trd.2020.102295,0,1,0,0,0,0,0,0,0
+82,Optimizing one-way traffic network reconfiguration and lane-based non-diversion routing for evacuation,(Zhao et al. 2016),10.1002/atr.1362,1,1,1,0,0,0,0,0,0
+83,An intelligent system for emergency traffic routing,(Zhou and Liu 2011),10.1007/978-3-642-23223-7_55,0,1,0,0,0,1,1,0,0
+84,Hurricane Evacuation Modeling Using Behavior Models and Scenario-Driven Agent-based Simulations,(Zhu et al. 2018),10.1016/j.procs.2018.04.074,0,1,0,0,1,1,0,1,0
+85,Distributed genetic algorithm for disaster relief planning,(Zidi et al. 2013),,1,0,1,0,0,0,0,0,0
